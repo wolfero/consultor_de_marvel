@@ -15,11 +15,14 @@
 
 # Getting Started
 -   ## Pre-requisites ✔️
-    It's necessary to create an .env file and add the API KEY in the following format:
+    It's necessary to create an .env file and add the API KEYS in the following format:
     
-    `REACT_APP_ACCESS_KEY = HERE YOUR API KEY`
+    `REACT_APP_PUBLIC_KEY = HERE YOUR PUBLIC API KEY`
+    `REACT_APP_PRIVATE_KEY = HERE YOUR PRIVATE API KEY`
+
 -   ## Installation 🛠
     `npm install`
+
 -   ## Running the project ✈
 
     `npm run start` [http://localhost:3000](http://localhost:3000) to view it in the browser.
