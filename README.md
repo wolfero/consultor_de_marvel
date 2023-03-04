@@ -56,6 +56,13 @@ An application of react on Marvel consultant, where we can find the details of t
 
 - [axios](https://axios-http.com/es/)
 - [md5](https://www.npmjs.com/package/md5)
+- [sass](https://sass-lang.com/)
+- [chakra-UI](https://chakra-ui.com/)
+- [chakra icons](https://chakra-ui.com/docs/components/icon/usage)
+- [reactrouter](https://reactrouter.com/en/main)
+
+
+
 
 <!-- # Assumptions -->
 
