@@ -1,11 +1,10 @@
-import { RouterProvider } from 'react-router-dom';
 import SectionContext from './context/SectionContext';
 import { useState, useEffect } from 'react';
-import { pageRoutes } from './routes/pageRoutes';
 import { getCharactersData, getComicsData, getSeriesData } from './services/Service';
 import { SectionContextType } from './types/section';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import MyRoutes from './routes/MyRoutes';
 
 function App() {
 	const [data, setData] = useState<SectionContextType>({
@@ -43,15 +42,15 @@ function App() {
 
 	return (
 		<SectionContext.Provider value={data}>
-		<>
-			<header>
-				<Navbar />
-			</header>
-			<RouterProvider router={pageRoutes} />
-			<footer>
-				<Footer />
-			</footer>
-		</>
+			<>
+				<header>
+					<Navbar />
+				</header>
+				<MyRoutes/>
+				<footer>
+					<Footer />
+				</footer>
+			</>
 		</SectionContext.Provider>
 	);
 }
