@@ -11,21 +11,21 @@ const hash = md5(`${ts}${apiPrivateKey}${apiPublicKey}`);
 const urlApi = 'http://gateway.marvel.com/v1/public/';
 
 export const getCharactersData = async () => {
-	const url = `${urlApi}characters?ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+	const url = `${urlApi}characters?orderBy=name&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 	const response = await axios.get(url);
 	const characterData: CharacterDataWrapper = response.data;
 	return characterData;
 };
 
 export const getComicsData = async () => {
-	const url = `${urlApi}comics?ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+	const url = `${urlApi}comics?orderBy=title&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 	const response = await axios.get(url);
 	const comicData: ComicDataWrapper = response.data;
 	return comicData;
 };
 
 export const getSeriesData = async () => {
-	const url = `${urlApi}series?ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+	const url = `${urlApi}series?orderBy=title&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 	const response = await axios.get(url);
 	const seriesData: SeriesDataWrapper = response.data;
 	return seriesData;
