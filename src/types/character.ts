@@ -1,3 +1,5 @@
+import { Url, ImageUrl, ComicsList, EventList, SeriesSummary, StoryList } from './global';
+
 export interface CharacterDataWrapper {
 	code: number;
 	status: string;
@@ -23,58 +25,11 @@ export interface Character {
 	modified: string;
 	resourceURI: string;
 	urls: Url[];
-	thumbnail: Image;
+	thumbnail: ImageUrl;
 	comics: ComicsList;
 	stories: StoryList;
 	events: EventList;
 	series: SeriesList;
-}
-
-export interface Url {
-	type: string;
-	url: string;
-}
-
-export interface Image {
-	path: string;
-	extension: string;
-}
-
-export interface ComicsList {
-	available: number;
-	returned: number;
-	collectionURI: string;
-	items: ComicSummary[];
-}
-
-export interface ComicSummary {
-	resourceURI: string;
-	name: string;
-}
-
-export interface StoryList {
-	available: number;
-	returned: number;
-	collectionURI: string;
-	items: StorySummary[];
-}
-
-export interface StorySummary {
-	resourceURI: string;
-	name: string;
-	type: string;
-}
-
-export interface EventList {
-	available: number;
-	returned: number;
-	collectionURI: string;
-	items: EventSummary[];
-}
-
-export interface EventSummary {
-	resourceURI: string;
-	name: string;
 }
 
 export interface SeriesList {
@@ -82,9 +37,4 @@ export interface SeriesList {
 	returned: number;
 	collectionURI: string;
 	items: SeriesSummary[];
-}
-
-export interface SeriesSummary {
-	resourceURI: string;
-	name: string;
 }
