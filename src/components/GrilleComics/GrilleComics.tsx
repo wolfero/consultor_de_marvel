@@ -11,7 +11,13 @@ const GrilleComics = () => {
 			{error.code === 0 ? (
 				comics != null ? (
 					error.code === 0 ? (
-						<SimpleGrid columns={4} spacing={4} justifyContent="center">
+						<SimpleGrid
+							columns={{ base: 1, md: 2, lg: 4 }}
+							spacing={4}
+							justifyContent="center"
+							justifyItems={'center'}
+							padding={4}
+						>
 							{comics.data.results.map((comic) => (
 								<ComicsCards key={comic.id} comic={comic} />
 							))}

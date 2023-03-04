@@ -11,7 +11,13 @@ const GrilleSeries = () => {
 			{error.code === 0 ? (
 				series != null ? (
 					error.code === 0 ? (
-						<SimpleGrid columns={4} spacing={4} justifyContent="center">
+						<SimpleGrid
+							columns={{ base: 1, md: 2, lg: 4 }}
+							spacing={4}
+							justifyContent="center"
+							justifyItems={'center'}
+							padding={4}
+						>
 							{series.data.results.map((serie) => (
 								<SeriesCards key={serie.id} serie={serie} />
 							))}

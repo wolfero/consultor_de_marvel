@@ -1,4 +1,4 @@
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 
 import styles from "./NavItem.module.scss";
 
