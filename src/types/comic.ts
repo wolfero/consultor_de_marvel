@@ -43,7 +43,7 @@ export interface Comic {
 	dates: ComicDate[];
 	prices: ComicPrice[];
 	thumbnail: ImageUrl;
-	images: ImageUrl;
+	images: ImageUrl[];
 	creators: CreatorList;
 	characters: CharacterList;
 	stories: StoryList;

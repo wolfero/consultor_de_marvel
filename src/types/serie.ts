@@ -23,11 +23,12 @@ export interface Series {
 	title: string;
 	description: string;
 	resourceURI: string;
-	urls: Url;
+	urls: Url[];
 	startYear: number;
 	endYear: number;
 	rating: string;
-	modified: Date;
+	type:string;
+	modified: string;
 	thumbnail: ImageUrl;
 	comics: ComicsList;
 	stories: StoryList;
@@ -35,7 +36,7 @@ export interface Series {
 	characters: CharacterList;
 	creators: CreatorList;
 	next: SeriesSummary;
-	previous: SeriesSummary;
+	previous: SeriesSummary|null;
 }
 
 

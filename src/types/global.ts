@@ -18,7 +18,7 @@ export interface CharacterList {
 export interface CharacterSummary {
 	resourceURI: string;
 	name: string;
-	role: string;
+	role?: string;
 }
 
 export interface ComicsList {
