@@ -1,10 +1,10 @@
 import SectionContext from './context/SectionContext';
 import { useState, useEffect } from 'react';
-import { getCharactersData, getComicsData, getSeriesData } from './services/Service';
 import { SectionContextType } from './types/section';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import MyRoutes from './routes/MyRoutes';
+import { MarvelService } from './services/MarvelService';
 
 function App() {
 	const [data, setData] = useState<SectionContextType>({
@@ -15,9 +15,10 @@ function App() {
 	});
 
 	const loadData = async () => {
-		const characters = await getCharactersData();
-		const comics = await getComicsData();
-		const series = await getSeriesData();
+		const marvelService = new MarvelService();
+		const characters = await marvelService.getCharactersData();
+		const comics = await marvelService.getComicsData();
+		const series = await marvelService.getSeriesData();
 		return {
 			characters: characters,
 			comics: comics,
@@ -46,7 +47,7 @@ function App() {
 				<header>
 					<Navbar />
 				</header>
-				<MyRoutes/>
+				<MyRoutes />
 				<footer>
 					<Footer />
 				</footer>
