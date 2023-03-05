@@ -8,9 +8,7 @@
 -   [Acceptance Criteria](#acceptance-criteria)
 -   [Optional Criteria](#optional-criteria)
 -   [Used packages](#used-packages)
-<!-- -   [Assumptions](#assumptions) -->
-<!-- -   [Components](#components) -->
-<!-- -   [End-to-End flow](#end-to-end-flow) -->
+-   [End-to-End flow](#end-to-end-flow)
 <!-- -   [Data structures](#data-structures) -->
 
 # Getting Started
@@ -63,16 +61,7 @@ An application of react on Marvel consultant, where we can find the details of t
 - [jest](https://jestjs.io/es-ES/)
 
 
-
-
-<!-- # Assumptions -->
-
-<!-- # Components -->
-
-<!-- # End-to-End flow -->
+# End-to-End flow
 
 <!-- # Data structures -->
 
-<!-- ```
-
-``` -->
