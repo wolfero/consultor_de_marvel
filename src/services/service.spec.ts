@@ -1,23 +1,38 @@
-import { characterDataMock } from '../mocks/characterDataMock';
-import { comicDataMock } from '../mocks/comicDataMock';
+import { charactersDataMock } from '../mocks/charactersDataMock';
+import { comicsDataMock } from '../mocks/comicsDataMock';
 import { seriesDataMock } from '../mocks/seriesDataMock';
-import { CharacterDataWrapper } from '../types/character';
-import { ComicDataWrapper } from '../types/comic';
+import { CharactersDataWrapper } from '../types/characters';
+import { ComicsDataWrapper } from '../types/comics';
 import { SeriesDataWrapper } from '../types/serie';
 import { Service } from './Service';
 
 class StubMarvelService implements Service {
+	getNextCharactersData(number: number): Promise<CharactersDataWrapper> {
+		return new Promise<CharactersDataWrapper>((resolve) => {
+			resolve(charactersDataMock);
+		});
+	}
 	getCharactersData() {
-		return new Promise<CharacterDataWrapper>((resolve) => {
-			resolve(characterDataMock);
+		return new Promise<CharactersDataWrapper>((resolve) => {
+			resolve(charactersDataMock);
 		});
 	}
 	getComicsData() {
-		return new Promise<ComicDataWrapper>((resolve) => {
-			resolve(comicDataMock);
+		return new Promise<ComicsDataWrapper>((resolve) => {
+			resolve(comicsDataMock);
+		});
+	}
+	getNextComicsData(number: number): Promise<ComicsDataWrapper> {
+		return new Promise<ComicsDataWrapper>((resolve) => {
+			resolve(comicsDataMock);
 		});
 	}
 	getSeriesData() {
+		return new Promise<SeriesDataWrapper>((resolve) => {
+			resolve(seriesDataMock);
+		});
+	}
+	getNextSeriesData(number: number): Promise<SeriesDataWrapper> {
 		return new Promise<SeriesDataWrapper>((resolve) => {
 			resolve(seriesDataMock);
 		});
@@ -40,7 +55,7 @@ describe('Marvel service should', () => {
 
 		const comicsResponse = await marvelService.getComicsData();
 
-		const comics=comicsResponse.data.results
+		const comics = comicsResponse.data.results;
 		const expectedComicsLength = 1;
 		expect(comics.length).toBe(expectedComicsLength);
 	});
@@ -50,7 +65,7 @@ describe('Marvel service should', () => {
 
 		const seriesResponse = await marvelService.getSeriesData();
 
-		const series=seriesResponse.data.results
+		const series = seriesResponse.data.results;
 		const expectedSeriesLength = 1;
 		expect(series.length).toBe(expectedSeriesLength);
 	});

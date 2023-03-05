@@ -1,7 +1,7 @@
 import axios from 'axios';
 import md5 from 'md5';
-import { CharacterDataWrapper } from '../types/character';
-import { ComicDataWrapper } from '../types/comic';
+import { CharactersDataWrapper } from '../types/characters';
+import { ComicsDataWrapper } from '../types/comics';
 import { SeriesDataWrapper } from '../types/serie';
 import { Service } from './Service';
 
@@ -15,31 +15,42 @@ export class MarvelService implements Service {
 	async getCharactersData() {
 		const url = `${urlApi}characters?orderBy=name&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 		const response = await axios.get(url);
-		const characterData: CharacterDataWrapper = response.data;
-		return characterData;
+		const charactersData: CharactersDataWrapper = response.data;
+		return charactersData;
 	}
+
+	async getNextCharactersData(number: number) {
+		const url = `${urlApi}characters?orderBy=name&offset=${number}&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+		const response = await axios.get(url);
+		const charactersData: CharactersDataWrapper = response.data;
+		return charactersData;
+	}
+
 	async getComicsData() {
 		const url = `${urlApi}comics?orderBy=title&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 		const response = await axios.get(url);
-		const comicData: ComicDataWrapper = response.data;
-		return comicData;
+		const comicsData: ComicsDataWrapper = response.data;
+		return comicsData;
 	}
+
+	async getNextComicsData(number: number): Promise<ComicsDataWrapper> {
+		const url = `${urlApi}comics?orderBy=title&offset=${number}&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+		const response = await axios.get(url);
+		const comicsData: ComicsDataWrapper = response.data;
+		return comicsData;
+	}
+
 	async getSeriesData() {
 		const url = `${urlApi}series?orderBy=title&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
 		const response = await axios.get(url);
 		const seriesData: SeriesDataWrapper = response.data;
 		return seriesData;
 	}
+
+	async getNextSeriesData(number: number): Promise<SeriesDataWrapper> {
+		const url = `${urlApi}series?orderBy=title&offset=${number}&ts=${ts}&apikey=${apiPublicKey}&hash=${hash}`;
+		const response = await axios.get(url);
+		const seriesData: SeriesDataWrapper = response.data;
+		return seriesData;
+	}
 }
-
-export const getCharactersData = async () => {
-	return new MarvelService().getCharactersData();
-};
-
-export const getComicsData = async () => {
-	return new MarvelService().getComicsData();
-};
-
-export const getSeriesData = async () => {
-	return new MarvelService().getSeriesData();
-};
