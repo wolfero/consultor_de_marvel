@@ -38,7 +38,7 @@ export const CharacterCards = ({ character }: CardProps) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	return (
-		<Card maxW="sm" bg={'green.700'}>
+		<Card maxW="sm">
 			<CardBody>
 				<Image src={imageUrl} alt={name} borderRadius="lg" />
 				<Stack mt="6" spacing="3">
