@@ -14,6 +14,10 @@ function App() {
 		error: { code: 0, message: '' },
 	});
 
+	function updateContextData(newData: SectionContextType) {
+		setData(newData);
+	}
+
 	const loadData = async () => {
 		const marvelService = new MarvelService();
 		const characters = await marvelService.getCharactersData();
@@ -42,7 +46,7 @@ function App() {
 	}, []);
 
 	return (
-		<SectionContext.Provider value={data}>
+		<SectionContext.Provider value={{ data, updateContextData }}>
 			<>
 				<header>
 					<Navbar />

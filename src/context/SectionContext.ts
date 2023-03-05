@@ -1,13 +1,14 @@
 import { createContext } from 'react';
-import { SectionContextType } from '../types/section';
+import { ContextData } from '../types/section';
 
-const sectionData: SectionContextType = {
-	characters: null,
-	comics: null,
-	series: null,
-	error: { code: 0, message: '' },
-};
-
-const SectionContext = createContext(sectionData);
+const SectionContext = createContext<ContextData>({
+	data: {
+		characters: null,
+		comics: null,
+		series: null,
+		error: { code: 0, message: '' },
+	},
+	updateContextData: () => {},
+});
 
 export default SectionContext;
