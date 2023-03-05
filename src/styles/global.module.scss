@@ -1,0 +1,21 @@
+$color-red: rgb(215, 48, 48);
+$color-blue: rgb(41, 147, 239);
+
+.paginationButtons {
+	justify-content: space-around;
+	padding: 2rem;
+	gap: 2rem;
+    
+
+	.button {
+		gap: 1rem;
+		padding: 1rem;
+		border-radius: 0.5rem;
+        background-color: $color-red;;
+
+		&:hover {
+			cursor: pointer;
+            background-color: $color-blue;
+		}
+	}
+}
