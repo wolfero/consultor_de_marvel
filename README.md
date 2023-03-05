@@ -67,11 +67,12 @@ An application of react on Marvel consultant, where we can find the details of t
 -   [jest](https://jestjs.io/es-ES/)
 
 # End-to-End flow
+
 ![image](https://user-images.githubusercontent.com/64894110/222978390-24182bae-4309-43a5-8677-79fa69a11c4d.png)
 
 # Data structures
 
-## Characters structure
+### Characters structure
 
 ```
 {
@@ -200,7 +201,7 @@ An application of react on Marvel consultant, where we can find the details of t
 }
 ```
 
-## Comics structure
+### Comics structure
 
 ```
 {
@@ -365,7 +366,7 @@ An application of react on Marvel consultant, where we can find the details of t
 }
 ```
 
-## Series structure
+### Series structure
 
 ```
 {
