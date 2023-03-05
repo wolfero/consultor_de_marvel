@@ -60,6 +60,7 @@ An application of react on Marvel consultant, where we can find the details of t
 - [chakra-UI](https://chakra-ui.com/)
 - [chakra icons](https://chakra-ui.com/docs/components/icon/usage)
 - [reactrouter](https://reactrouter.com/en/main)
+- [jest](https://jestjs.io/es-ES/)
 
 
 
