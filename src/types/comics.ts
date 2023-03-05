@@ -1,6 +1,6 @@
 import { Url,ImageUrl, CharacterList, ComicSummary, CreatorList, EventList, SeriesSummary, StoryList } from "./global";
 
-export interface ComicDataWrapper {
+export interface ComicsDataWrapper {
 	code: number;
 	status: string;
 	copyright: string;

@@ -1,16 +1,16 @@
 import { Url, ImageUrl, ComicsList, EventList, SeriesSummary, StoryList } from './global';
 
-export interface CharacterDataWrapper {
+export interface CharactersDataWrapper {
 	code: number;
 	status: string;
 	copyright: string;
 	attributionText: string;
 	attributionHTML: string;
-	data: CharacterDataContainer;
+	data: CharactersDataContainer;
 	etag: string;
 }
 
-export interface CharacterDataContainer {
+export interface CharactersDataContainer {
 	offset: number;
 	limit: number;
 	total: number;
