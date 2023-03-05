@@ -62,6 +62,7 @@ An application of react on Marvel consultant, where we can find the details of t
 
 
 # End-to-End flow
+![image](https://user-images.githubusercontent.com/64894110/222978390-24182bae-4309-43a5-8677-79fa69a11c4d.png)
 
 <!-- # Data structures -->
 
