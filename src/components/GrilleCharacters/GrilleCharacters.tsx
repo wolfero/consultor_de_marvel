@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import useSection from '../../hooks/useSection';
 import { CharacterCards } from '../Cards/Cards';
 import { ErrorAlert } from '../ErrorAlert/ErrorAlert';
@@ -10,7 +10,7 @@ const GrilleCharacters = () => {
 	console.log(characters?.data.results);
 
 	return (
-		<>
+		<Box minHeight={'90vh'}>
 			{error.code === 0 ? (
 				characters != null ? (
 					error.code === 0 ? (
@@ -34,7 +34,7 @@ const GrilleCharacters = () => {
 			) : (
 				<ErrorAlert message={error.message} />
 			)}
-		</>
+		</Box>
 	);
 };
 

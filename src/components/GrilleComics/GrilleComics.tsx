@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import useSection from '../../hooks/useSection';
 import { ComicsCards } from '../Cards/Cards';
 import { ErrorAlert } from '../ErrorAlert/ErrorAlert';
@@ -7,7 +7,7 @@ import { Spinner } from '../Spinner/Spinner';
 const GrilleComics = () => {
 	const { comics, error } = useSection();
 	return (
-		<>
+		<Box minHeight={'90vh'}>
 			{error.code === 0 ? (
 				comics != null ? (
 					error.code === 0 ? (
@@ -31,7 +31,7 @@ const GrilleComics = () => {
 			) : (
 				<ErrorAlert message={error.message} />
 			)}
-		</>
+		</Box>
 	);
 };
 
