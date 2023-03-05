@@ -1,6 +1,6 @@
-import { CharacterDataWrapper } from '../types/character';
+import { CharactersDataWrapper } from '../types/characters';
 
-export const characterDataMock: CharacterDataWrapper = {
+export const charactersDataMock: CharactersDataWrapper = {
 	code: 200,
 	status: 'Ok',
 	copyright: '© 2023 MARVEL',

@@ -1,6 +1,6 @@
-import { ComicDataWrapper } from '../types/comic';
+import { ComicsDataWrapper } from '../types/comics';
 
-export const comicDataMock: ComicDataWrapper = {
+export const comicsDataMock: ComicsDataWrapper = {
 	code: 200,
 	status: 'Ok',
 	copyright: '© 2023 MARVEL',

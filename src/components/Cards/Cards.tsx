@@ -17,8 +17,8 @@ import {
 	ModalOverlay,
 	VStack,
 } from '@chakra-ui/react';
-import { Character } from '../../types/character';
-import { Comic } from '../../types/comic';
+import { Character } from '../../types/characters';
+import { Comic } from '../../types/comics';
 import { Series } from '../../types/serie';
 
 interface CardProps {
@@ -141,8 +141,6 @@ export const SeriesCards = ({ serie }: SeriesProps) => {
 	const { id, title, description, thumbnail } = serie;
 	const imageUrl = `${thumbnail.path}.${thumbnail.extension}`;
 	const { isOpen, onOpen, onClose } = useDisclosure();
-
-	console.log(description);
 
 	return (
 		<Card maxW="sm">
